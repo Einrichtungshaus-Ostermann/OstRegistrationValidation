@@ -1,0 +1,12 @@
+{
+  "name": "ost/registration-validation",
+  "license": "proprietary",
+  "type": "shopware-plugin",
+  "extra": {
+    "installer-name": "OstRegistrationValidation"
+  },
+  "scripts": {
+    "test": "phpunit -c tests/ --colors=always",
+    "test-unit": "phpunit -c tests/phpunit_unit.xml --colors=always"
+  }
+}
