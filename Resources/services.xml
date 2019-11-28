@@ -10,5 +10,12 @@
             <argument type="string">OstRegistrationValidation</argument>
         </service>
 
+        <!-- frontend and widget controller listeners -->
+        <service id="ost_registration_validation.listeners.controllers.frontend.pre_dispatch" class="OstRegistrationValidation\Listeners\Controllers\Frontend">
+            <argument type="service" id="ost_registration_validation.configuration"/>
+            <argument type="string">%ost_registration_validation.view_dir%</argument>
+            <tag name="shopware.event_listener" method="onPreDispatch" event="Enlight_Controller_Action_PreDispatch_Frontend" />
+        </service>
+
     </services>
 </container>

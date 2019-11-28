@@ -9,6 +9,9 @@
  * 1.0.0
  * - initial release
  *
+ * 1.1.0
+ * - added validation
+ *
  * @package   OstRegistrationValidation
  *
  * @author    Eike Brandt-Warneke <e.brandt-warneke@ostermann.de>

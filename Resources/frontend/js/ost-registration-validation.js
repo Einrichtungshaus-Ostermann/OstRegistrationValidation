@@ -33,8 +33,8 @@
     $.ostRegistrationValidationComponent = {
     };
 
-    // ...
-    $.subscribe('plugin/swRegister/onSetFieldAsSuccess', function( event, plugin, $el ) {
+    // we append to the success message to check for pattern validity
+    $.subscribe('plugin/swRegister/onSetFieldAsSuccess', function(event, plugin, $el) {
         // get the name or an empty string if its invalid
         var name = (typeof $el.attr('name') === "undefined" )
             ? ""
@@ -46,39 +46,39 @@
             return;
         }
 
-        // field is success
-        $el.addClass("has--no-error");
-    });
-
-
-    // ...
-    $.subscribe('plugin/swRegister/onSetFieldAsError', function( event, plugin, $el ) {
-        $el.removeClass("has--no-error");
-    });
-
-    // ...
-    $.subscribe('plugin/swRegister/onValidateInput', function( subscriber, plugin, event, action ) {
-        // get parameters
-        var $el = $(event.target);
-        var id = $el.attr('id');
-
-        // we only check for phone for now
-        if ( id !== "phone") {
-            // stop
+        // if we have no custom validation
+        if (!$el.hasClass('ost-registration-validation')) {
+            // always set as no-error
+            $el.addClass("has--no-error");
             return;
         }
 
-        // get the trimmed input
-        var value = $.trim($el.val());
+        // get the element
+        var input = document.getElementsByName($el.attr('name'))[0];
 
-        // is it empty?
-        if ( value === "") {
-            // force empty input for browser validation
-            $el.val("");
-
-            // and add error flag
-            plugin.setFieldAsError($el);
+        // do we even support html5?
+        if (typeof input.checkValidity != 'function') {
+            // we dont
+            return;
         }
+
+        // check validity
+        if (input.checkValidity() === true) {
+            // all fine
+            $el.removeClass("has--error");
+            $el.addClass("has--no-error");
+
+        } else {
+            // add error flag
+            $el.removeClass("has--no-error");
+            $el.addClass("has--error");
+        }
+    });
+
+    // ...
+    $.subscribe('plugin/swRegister/onSetFieldAsError', function(event, plugin, $el) {
+        // remove no-error flag
+        $el.removeClass("has--no-error");
     });
 
 })(jQuery);

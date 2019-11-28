@@ -28,3 +28,59 @@ input[type="tel"].has--no-error {
     background: #def2e7;
     border-color: #208e4e;
 }
+
+// custom validation error messages
+.ost-registration-validation + .error-message,
+.ost-registration-validation + .error-message + .error-message {
+    display: none;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    color: #e74c3c;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+// less margin at higher viewports
+@media screen and(min-width: @tabletViewportWidth) {
+    .ost-registration-validation + .error-message,
+    .ost-registration-validation + .error-message + .error-message {
+        margin-top: -10px;
+    }
+}
+
+// only visible if directly after an error field
+.ost-registration-validation.has--error + .error-message {
+    display: block;
+}
+
+// special case for zip and city
+// this does ONLY work if we have zip -before- city and not zip -after- city
+div.register--zip-city {
+    .error-message,
+    .ost-registration-validation + .error-message{
+        display: none;
+        float: left;
+    }
+
+    input.has--error + input:not(.has--error) + .error-message {
+        display: block;
+        width: 28%;
+    }
+
+    input:not(.has--error) + input.has--error + .error-message + .error-message {
+        display: block;
+        width: 70%;
+        margin-left: 30%;
+    }
+
+    input.has--error + input.has--error + .error-message {
+        display: block;
+        width: 28%;
+        margin-right: 2%;
+    }
+
+    input.has--error + input.has--error + .error-message + .error-message {
+        display: block;
+        width: 70%;
+    }
+}

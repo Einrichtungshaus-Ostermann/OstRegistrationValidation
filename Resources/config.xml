@@ -8,5 +8,168 @@
             <label><![CDATA[<b>Allgemeine Einstellungen</b>]]></label>
         </element>
 
+        <element type="boolean">
+            <name>shopStatus</name>
+            <label>Shop aktivieren</label>
+            <value>true</value>
+            <description>Soll das Plugin für diesen Shop aktiviert werden?</description>
+        </element>
+
+        <element type="button">
+            <name>firstnameButton</name>
+            <label><![CDATA[<b>Validierung - Vorname</b>]]></label>
+        </element>
+
+        <element type="boolean">
+            <name>firstnameStatus</name>
+            <label>Aktivieren</label>
+            <value>true</value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>firstnamePattern</name>
+            <label>Pattern</label>
+            <value><![CDATA[[a-zA-ZßöÖäÄüÜ.,+\-\s]{3,100}]]></value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>firstnameTitle</name>
+            <label>Fehlermeldung</label>
+            <value><![CDATA[Bitte nur Buchstaben, Leerzeichen, sowie die Zeichen . , - + eingeben, mindestens 3 Zeichen]]></value>
+            <description>...</description>
+        </element>
+
+        <element type="button">
+            <name>lastnameButton</name>
+            <label><![CDATA[<b>Validierung - Nachname</b>]]></label>
+        </element>
+
+        <element type="boolean">
+            <name>lastnameStatus</name>
+            <label>Aktivieren</label>
+            <value>true</value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>lastnamePattern</name>
+            <label>Pattern</label>
+            <value><![CDATA[[a-zA-ZßöÖäÄüÜ.,+\-\s]{3,100}]]></value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>lastnameTitle</name>
+            <label>Fehlermeldung</label>
+            <value><![CDATA[Bitte nur Buchstaben, Leerzeichen, sowie die Zeichen . , - + eingeben, mindestens 3 Zeichen]]></value>
+            <description>...</description>
+        </element>
+
+        <element type="button">
+            <name>phoneButton</name>
+            <label><![CDATA[<b>Validierung - Telefon</b>]]></label>
+        </element>
+
+        <element type="boolean">
+            <name>phoneStatus</name>
+            <label>Aktivieren</label>
+            <value>true</value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>phonePattern</name>
+            <label>Pattern</label>
+            <value><![CDATA[[0-9\s]{8,20}]]></value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>phoneTitle</name>
+            <label>Fehlermeldung</label>
+            <value><![CDATA[Bitte nur Ziffern und Leezeichen eingeben, mindestens 8 Zeichen, maximal 20 Zeichen]]></value>
+            <description>...</description>
+        </element>
+
+        <element type="button">
+            <name>streetButton</name>
+            <label><![CDATA[<b>Validierung - Straße</b>]]></label>
+        </element>
+
+        <element type="boolean">
+            <name>streetStatus</name>
+            <label>Aktivieren</label>
+            <value>true</value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>streetPattern</name>
+            <label>Pattern</label>
+            <value><![CDATA[[0-9a-zA-ZßöÖäÄüÜ.\-\s]{3,100}]]></value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>streetTitle</name>
+            <label>Fehlermeldung</label>
+            <value><![CDATA[Bitte nur Buchstaben, Ziffern, Leerzeichen, sowie die Zeichen . - eingeben, mindestens 3 Zeichen]]></value>
+            <description>...</description>
+        </element>
+
+        <element type="button">
+            <name>zipButton</name>
+            <label><![CDATA[<b>Validierung - Postleitzahl</b>]]></label>
+        </element>
+
+        <element type="boolean">
+            <name>zipStatus</name>
+            <label>Aktivieren</label>
+            <value>true</value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>zipPattern</name>
+            <label>Pattern</label>
+            <value><![CDATA[[0-9a-zA-Z\s]{4,15}]]></value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>zipTitle</name>
+            <label>Fehlermeldung</label>
+            <value><![CDATA[Bitte nur Buchstaben, Ziffern und Leerzeichen eingeben, mindestens 4 Zeichen, maximal 15 Zeichen]]></value>
+            <description>...</description>
+        </element>
+
+        <element type="button">
+            <name>cityButton</name>
+            <label><![CDATA[<b>Validierung - Stadt</b>]]></label>
+        </element>
+
+        <element type="boolean">
+            <name>cityStatus</name>
+            <label>Aktivieren</label>
+            <value>true</value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>cityPattern</name>
+            <label>Pattern</label>
+            <value><![CDATA[[a-zA-ZßöÖäÄüÜ.\-\s]{3,100}]]></value>
+            <description>...</description>
+        </element>
+
+        <element type="text">
+            <name>cityTitle</name>
+            <label>Fehlermeldung</label>
+            <value><![CDATA[Bitte nur Buchstaben, Leerzeichen, sowie die Zeichen . - eingeben, mindestens 3 Zeichen]]></value>
+            <description>...</description>
+        </element>
+
     </elements>
 </config>
